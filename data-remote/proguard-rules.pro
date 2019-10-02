@@ -1,21 +1,53 @@
-# Add project specific ProGuard rules here.
-# You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+########--------Retrofit + RxJava--------#########
+-dontwarn retrofit.**
+-keep class retrofit.** { *; }
+-dontwarn sun.misc.Unsafe
+-dontwarn com.octo.android.robospice.retrofit.RetrofitJackson**
+-dontwarn retrofit.appengine.UrlFetchClient
+-keepattributes Signature
+-keepattributes Exceptions
+-keepclasseswithmembers class * {
+    @retrofit.http.* <methods>;
+}
+-keep class com.google.gson.** { *; }
+-keep class com.google.inject.** { *; }
+-keep class org.apache.http.** { *; }
+-keep class org.apache.james.mime4j.** { *; }
+-keep class javax.inject.** { *; }
+-keep class retrofit.** { *; }
+-dontwarn org.apache.http.**
+-dontwarn android.net.http.AndroidHttpClient
+-dontwarn retrofit.**
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+-dontwarn sun.misc.**
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+-keepclassmembers class rx.internal.util.unsafe.*ArrayQueue*Field* {
+   long producerIndex;
+   long consumerIndex;
+}
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+-keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueProducerNodeRef {
+    rx.internal.util.atomic.LinkedQueueNode producerNode;
+}
+
+-keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueConsumerNodeRef {
+    rx.internal.util.atomic.LinkedQueueNode consumerNode;
+}
+
+-dontnote rx.internal.util.PlatformDependent
+
+-dontwarn okio.**
+-dontwarn retrofit2.Platform$Java8
+-dontwarn com.google.errorprone.annotations.**
+
+-keepclassmembers class * {
+    private <fields>;
+    public <fields>;
+}
+
+-keep class com.lgcypower.canvass.data.** { *; }
+-keep class com.lgcypower.canvass.presentation.** { *; }
+-keep class com.lgcypower.canvass.domain.** { *; }
+
+
+-dontwarn java.lang.invoke**

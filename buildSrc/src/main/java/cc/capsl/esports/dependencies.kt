@@ -1,7 +1,11 @@
 package cc.capsl.esports
 
+
 object Libs {
     const val androidGradlePlugin = "com.android.tools.build:gradle:3.5.0"
+    const val min = 16
+    const val target = 29
+    const val compile = 29
 
     object Kotlin {
         private const val version = "1.3.50"
@@ -37,8 +41,8 @@ object Libs {
         object Lifecycle {
             private const val version = "2.1.0"
 
-            const val extension  = "androidx.lifecycle:lifecycle-extensions:$version"
-            const val compiler  = "androidx.lifecycle:lifecycle-compiler:$version"
+            const val extension = "androidx.lifecycle:lifecycle-extensions:$version"
+            const val compiler = "androidx.lifecycle:lifecycle-compiler:$version"
         }
 
         object Room {
@@ -68,7 +72,7 @@ object Libs {
         private const val version = "2.6.2"
         const val retrofit = "com.squareup.retrofit2:retrofit:$version"
         const val gsonConverter = "com.squareup.retrofit2:converter-gson:$version"
-        const val loggingInterceptor =  "com.squareup.okhttp3:logging-interceptor:4.2.0"
+        const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:4.2.0"
     }
 
     object Airbnb {
