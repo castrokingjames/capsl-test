@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cc.capsl.esports.feature.tournaments">
+
+    <application>
+        <activity
+            android:name=".TournamentsActivity"
+            android:label="@string/add_tournament_information">
+            <intent-filter>
+                <action android:name="cc.capsl.esports.feature.tournaments.open" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

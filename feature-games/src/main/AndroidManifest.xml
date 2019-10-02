@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cc.capsl.esports.feature.games">
+
+    <application>
+        <activity
+            android:name=".GamesActivity"
+            android:label="@string/choose_a_game">
+            <intent-filter>
+                <action android:name="cc.capsl.esports.feature.games.open" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

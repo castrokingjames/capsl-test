@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Esports</string>
+    <string name="choose_the_stage">"Choose the stage"</string>
+    <string name="add_tournament_information">Add tournament information</string>
+</resources>

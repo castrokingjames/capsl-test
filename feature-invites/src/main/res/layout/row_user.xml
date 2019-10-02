@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    tools:parentTag="android.widget.RelativeLayout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/thumbImageView"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toRightOf="@+id/thumbImageView">
+
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:singleLine="true"
+                android:text="@string/app_name"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:textColor="#212121" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/selector_done"
+                android:button="@null"
+                android:clickable="false"
+                android:focusable="false" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</merge>
